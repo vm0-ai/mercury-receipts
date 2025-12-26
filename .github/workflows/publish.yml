@@ -2,6 +2,9 @@ name: Publish Agent
 on:
   push:
     branches: [main]
+    paths:
+      - 'vm0.yaml'
+      - 'AGENTS.md'
 
 jobs:
   publish:

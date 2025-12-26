@@ -15,6 +15,7 @@ jobs:
         with:
           agent: mercury-receipts
           prompt: "do the job"
+          silent: true
           artifact-name: mercury-receipts-output
           vm0-token: ${{ secrets.VM0_TOKEN }}
           secrets: |

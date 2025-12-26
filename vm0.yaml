@@ -3,14 +3,12 @@ version: "1.0"
 agents:
   mercury-receipts:
     provider: claude-code
-    # Build agentic workflow using natural language
     instructions: AGENTS.md
     skills:
       - https://github.com/vm0-ai/vm0-skills/tree/main/mercury
       - https://github.com/vm0-ai/vm0-skills/tree/main/gmail
       - https://github.com/vm0-ai/vm0-skills/tree/main/slack
     environment:
-      # Get token using: claude setup-token, then add to .env file
       CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
       MERCURY_API_TOKEN: ${{ secrets.MERCURY_API_TOKEN }}
       GMAIL_CLIENT_ID: ${{ vars.GMAIL_CLIENT_ID }}
